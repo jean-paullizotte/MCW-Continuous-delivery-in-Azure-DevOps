@@ -192,9 +192,13 @@ Now that the template file has been uploaded, we'll deploy it several times to c
 
     ![In the Azure Cloud Shell window, the command has been entered is we are prompted for the name of the resource group we want to deploy to.](images/stepbystep/media/image44.png "Azure Cloud Shell window")
 
-2.  Enter the name of a resource group you want to deploy the resources to (i.e. TailspinToysRG). If it does not already exist, the template will create it. Then, press **Enter**.
+2.  Enter the name of a resource group you want to deploy the resources to (i.e. TailspinToysRG). If it does not already exist, the template will create it. Then, press **Enter**. 
+
+**NOTE:** You may want to use the resource group supplied in the portal, as creating other resource groups in the subscription may be limited.
 
 3.  Next, we're prompted to enter an Azure region (location) where we want to deploy our resources to (i.e. westus, centralus, eastus). Some examples are suggested by our command.
+
+**NOTE:** Again, since the resource group is existing, you may want to choose the current loction, which is eastus.
     
     ![In the Azure Cloud Shell window, we are prompted for the location we want to deploy to.](images/stepbystep/media/image45.png "Azure Cloud Shell window")
 
@@ -240,10 +244,10 @@ The following steps are very similar to what was done in the previous task with 
     echo "Enter the location (i.e. westus, centralus, eastus):" &&
     read location &&
     az group create --name $resourceGroupName --location "$location" &&
-    az group deployment create --resource-group $resourceGroupName --template-file "$HOME/azuredeploy.json"
+    az group deployment create --resource-group $resourceGroupName --template-file "~/studentfiles/armtemplate/azuredeploy.json"
     ```
     
-    ![In the Azure Cloud Shell window, the command has been entered is we are prompted for the name of the resource group we want to deploy to.](images/stepbystep/media/image44.png "Azure Cloud Shell window")
+    ![In the Azure Cloud Shell window, the command has been entered is we are prompted for the name of the resource group we want to deploy to.](images/stepbystep/media/image44.png "Azure Cloud Shell windowa")
 
 2.  Enter the name of a resource group from earlier that you deployed the resources to (i.e. TailspinToysRG). Then, press **Enter**.
     
@@ -331,6 +335,8 @@ In this exercise, you will create and configure an Azure DevOps account along wi
     ![In this screenshot, a Start free button is shown on the Azure DevOps home page.](images/stepbystep/media/image56.png "Azure DevOps screenshot")
 
 3.  Authenticate with a Microsoft account.
+
+**NOTE** It is suggested to use the same account, that was indicated to access the Azure portal at the setup of the lab. This will ensure your pipeline can access your resource group, later.
 
 4.  Choose **Continue** to accept the Terms of Service, Privacy Statement, and Code of Conduct.
 
@@ -598,6 +604,8 @@ In this exercise, you will create a release pipeline in Azure DevOps that perfor
 8.  This brings up the task editor and opens a panel with configuration details for the dev stage we created earlier. The configuration items set here will be made available to the tasks in this stage.
 
 9.  On this panel, we first need to configure the necessary details to connect the task to Azure for deployment. Let's first start by connecting to our Azure subscription. Select your Azure subscription from the "Azure subscription" dropdown and then choose the **Authorize** button to login and authenticate to the selected subscription.
+
+**NOTE** You may have to use the dropdown within the button itself, to log-in again, and select the proper resource group.
 
     ![On the panel, Azure subscription is highlighted along with the Authorize button.](images/stepbystep/media/image89b.png "Parameters")
 
