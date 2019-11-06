@@ -192,7 +192,7 @@ Now that the template file has been uploaded, we'll deploy it several times to c
 
     ![In the Azure Cloud Shell window, the command has been entered is we are prompted for the name of the resource group we want to deploy to.](images/stepbystep/media/image44.png "Azure Cloud Shell window")
 
-2.  Enter the name of a resource group you want to deploy the resources to (i.e. TailspinToysRG). If it does not already exist, the template will create it. Then, press **Enter**. 
+2.  Enter the name of a resource group you want to deploy the resources to (i.e. TailspinToysRG-labxxxxx). If it does not already exist, the template will create it. Then, press **Enter**. 
 
 **NOTE:** You may want to use the resource group supplied in the portal, as creating other resource groups in the subscription may be limited.
 
@@ -221,6 +221,7 @@ Now that the template file has been uploaded, we'll deploy it several times to c
    ![In the Azure Cloud Shell window, we are prompted for the administrative password for the PostgreSQL server and database we want to create.](images/stepbystep/media/image48.png "Azure Cloud Shell")
 
 10. Enter a value for the "administratorLoginPassword" and then press **Enter**.
+**NOTE** Use the password given for the lab.
 
     This will kick off the provisioning process which takes a few minutes to create all the resources for the environment. This is indicated by the "Running" text displayed at the bottom of the Azure Cloud Shell while the command is executing.
 
@@ -351,6 +352,9 @@ In this exercise, you will create and configure an Azure DevOps account along wi
 7.  On the **Repos** page for the **TailspinToys** repository, locate the "or push an existing repository from command line" section. Click the Copy button to copy the contents of the panel. We're going to use these commands in an upcoming step.
 
     ![In the "Add some code!" window, URLs appear to clone to your computer or push an existing repository from command line.](images/stepbystep/media/image59.png "TailspinToys is empty. Add some code! window")
+     **NOTE** Don't forget to hit the Generate credentials and note the username and password!!!
+    
+   
 
 ### Task 2: Add the Tailspin Toys source code repository to Azure DevOps
 
